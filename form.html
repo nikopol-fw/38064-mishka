@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="true">
+
+  <title>Мишка – Вязание на заказ</title>
+</head>
+<body>
+
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html" title="Перейти на Главную страницу">
+      <img class="page-header__logo-image" src="http://placehold.it/86x35" alt="Мишка, логотип" width="86" height="35">
+    </a>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
+      <ul class="main-nav__list site-list">
+
+        <li class="site-list__item site-list__item--catalog">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item site-list__item--custom-made">
+          <a href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="site-list__item site-list__item--search">
+          <a href="#">Поиск по сайту</a>
+        </li>
+        <li class="site-list__item site-list__item--cart">
+          <a href="#">Корзина: <span class="site-list__cart-filled">пока пуста</span></a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+
+    <div class="page-heading page-heading--inner">
+      <h1 class="page-main__title">Вязание на заказ</h1>
+    </div>
+
+    <section class="custom">
+      <h2 class="visually-hidden">Форма индивидуального заказа</h2>
+
+      <p class="custom__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+      <form class="filters-custom" method="GET" action="https://echo.htmlacademy.ru">
+        <fieldset class="filters-custom__type">
+          <legend>Тип</legend>
+
+          <ul class="filters-list">
+
+            <li class="filters-list__item">
+              <input type="radio" name="filters-custom__type" id="filters-custom__type-accessories">
+              <label for="filters-custom__type-accessories">Аксессуар для интерьера</label>
+            </li>
+
+            <li class="filters-list__item">
+              <input type="radio" name="filters-custom__type" id="filters-custom__type-toys">
+              <label for="filters-custom__type-toys">Детская игрушка</label>
+            </li>
+
+          </ul>
+        </fieldset>
+
+        <fieldset class="filters-custom__color">
+          <legend>Цвет</legend>
+
+          <ul class="filters-list">
+
+            <li class="filters-list__item">
+              <input type="checkbox" name="filters-custom__color-white" id="filters-custom__color-white">
+              <label for="filters-custom__color-white">Белый</label>
+            </li>
+
+            <li class="filters-list__item">
+              <input type="checkbox" name="filters-custom__color-grey" id="filters-custom__color-grey">
+              <label for="filters-custom__color-grey">Серый</label>
+            </li>
+
+            <li class="filters-list__item">
+              <input type="checkbox" name="filters-custom__color-tiffani" id="filters-custom__color-tiffani">
+              <label for="filters-custom__color-tiffani">«Тиффани»</label>
+            </li>
+
+            <li class="filters-list__item">
+              <input type="checkbox" name="filters-custom__color-black" id="filters-custom__color-black">
+              <label for="filters-custom__color-black">Черный</label>
+            </li>
+
+            <li class="filters-list__item">
+              <input type="checkbox" name="filters-custom__color-pink" id="filters-custom__color-pink">
+              <label for="filters-custom__color-pink">Розовый</label>
+            </li>
+
+            <li class="filters-list__item">
+              <input type="checkbox" name="filters-custom__color-orange" id="filters-custom__color-orange">
+              <label for="filters-custom__color-orange">Оранжевый</label>
+            </li>
+
+          </ul>
+        </fieldset>
+
+        <fieldset class="filters-custom__name">
+          <legend>ФИО</legend>
+
+          <ul class="filters-list">
+
+            <li class="filters-list__item">
+              <label for="filters-custom__first-name">Имя: </label>
+              <input type="text" placeholder="Введите ваше имя*" name="filters-custom__first-name" id="filters-custom__first-name" required>
+            </li>
+
+            <li class="filters-list__item">
+              <label for="filters-custom__last-name">Фамилия: </label>
+              <input type="text" placeholder="Укажите фамилию*" name="filters-custom__last-name" id="filters-custom__last-name" required>
+            </li>
+
+            <li class="filters-list__item">
+              <label for="filters-custom__second-name">Отчество: </label>
+              <input type="text" placeholder="Отчество, если желаете" name="filters-custom__second-name" id="filters-custom__second-name">
+            </li>
+
+          </ul>
+        </fieldset>
+
+        <fieldset class="filters-custom__phone">
+          <legend>Тел</legend>
+
+          <label for="filters-custom__phone" class="visually-hidden">Телефон: </label>
+          <input name="filters-custom__phone" id="filters-custom__phone" required>
+        </fieldset>
+
+        <fieldset class="filters-custom__email">
+          <legend>E-mail</legend>
+
+          <label for="filters-custom__email" class="visually-hidden">E-mail: </label>
+          <input type="email" name="filters-custom__email" id="filters-custom__email" required>
+        </fieldset>
+
+        <fieldset class="filters-custom__add">
+          <legend>Доп</legend>
+
+          <textarea name="filters-custom__text" id="filters-custom__text" cols="30" rows="10" placeholder="Опишите все ваши
+пожелания к заказу"></textarea>
+        </fieldset>
+
+        <p class="filters-custom__legend">*Поля обязательны для заполнения</p>
+
+        <button class="button" type="submit">Отправить заказ</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <ul class="page-footer__social social">
+
+      <li class="social__item social__item--inst">
+        <a href="#"><span class="visually-hidden">Мы в Инстаграм</span></a>
+      </li>
+      <li class="social__item social__item--fb">
+        <a href="#"><span class="visually-hidden">Мы в Фейсбук</span></a>
+      </li>
+      <li class="social__item social__item--tw">
+        <a href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+      </li>
+
+    </ul>
+
+    <p class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу HTML Academy в новой вкладке" target="_blank"><img src="http://placehold.it/27x34" alt="HTML Academy"></a>
+    </p>
+  </footer>
+
+</body>
+</html>
