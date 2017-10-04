@@ -1,25 +1,25 @@
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'),
-        url('../fonts/opensans.woff2') format('woff2'),
-        url('../fonts/opensans.woff') format('woff');
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'),
-        url('../fonts/opensansbold.woff2') format('woff2'),
-        url('../fonts/opensansbold.woff') format('woff');
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 
 body {
-  font: normal @font-size-base-mob/@font-lheight-base-mob 'Open Sans', 'Verdana', sans-serif;
+  font: normal @font-size-base-mob/@font-lheight-base-mob "Open Sans", "Verdana", sans-serif;
   color: @color-base;
 }
 
@@ -30,7 +30,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -52,9 +54,7 @@ img {
 
   white-space: nowrap;
 
-  -webkit-clip-path: inset(100%);
-
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -151,10 +151,10 @@ img {
   padding: 10px;
   box-sizing: content-box;
 
-  background: transparent url('../img/icon-menu-open.svg') center no-repeat;
+  background: transparent url("../img/icon-menu-open.svg") center no-repeat;
   border: 0;
 
   &.toggle-button--open {
-    background-image: url('../img/icon-menu-close.svg');
+    background-image: url("../img/icon-menu-close.svg");
   }
 }
