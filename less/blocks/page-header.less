@@ -1,0 +1,29 @@
+
+.page-header {
+  border: 1px solid @color-decore;
+}
+
+.page-header__logo {
+  display: block;
+  width: 86px + 20px * 2;
+  margin: 0 auto;
+  padding: 20px;
+
+  &:hover[href],
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    .no-outline;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}

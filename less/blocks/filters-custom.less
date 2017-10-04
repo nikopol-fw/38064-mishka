@@ -1,0 +1,91 @@
+
+.filters-custom {
+  fieldset {
+    margin: 0;
+    margin-bottom: @indet-out;
+    padding: 0;
+
+    border: none;
+    border-top: 1px solid #62d1ba;
+  }
+
+  legend {
+    margin-bottom: 20px;
+    padding-right: 25px;
+
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 17px;
+    color: @color-theme;
+    text-transform: uppercase;
+  }
+
+  label {
+    //padding-left: 60px;
+
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    color: black;
+  }
+
+  input {
+    //display: none;
+
+    &[type="text"],
+    &[type="email"] {
+      width: 100%;
+      padding: 10px 0;
+
+      font: inherit;
+      font-size: 19px;
+
+      border: 0;
+      border-bottom: 2px solid black;
+
+      &:hover,
+      &:focus {
+        border-color: #62d1ba;
+      }
+
+      &:focus {
+        .no-outline;
+      }
+    }
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+
+    font: inherit;
+    font-size: 19px;
+
+    border: 2px solid @color-base;
+
+    resize: vertical;
+
+    &:hover,
+    &:focus {
+      border-color: #62d1ba;
+    }
+
+    &:focus {
+      .no-outline;
+    }
+  }
+}
+
+.filters-custom__legend {
+  margin-top: 0;
+  margin-bottom: @indet-out;
+
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filters-custom__button {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,38 @@
+
+.catalog-heading {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.catalog-heading__item {
+  background-color: @color-theme;
+
+  a {
+    display: block;
+    padding: 25px 30px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: padding-bottom 0.3s ease-out;
+
+    &:hover,
+    &:focus {
+      padding-bottom: 30px;
+    }
+
+    &:focus {
+      .no-outline;
+    }
+
+    &:active {
+      .rgbaColorIn (white, 0.3);
+      color: @result;
+    }
+  }
+}
