@@ -87,3 +87,123 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+
+@media (min-width: @tablet-width) {
+  .week-goods__wrapper {
+    position: relative;
+
+    min-height: 404px + 50px + @indet-out-tablet + 2 * @indet-out-tablet;
+    padding-top: @indet-out-tablet;
+    padding-bottom: @indet-out-tablet;
+  }
+
+  .week-goods__title {
+    position: absolute;
+    right: @indet-out-tablet + 25px;
+
+    max-width: 80px;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .week-goods__goods-title {
+    margin-bottom: 50px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .week-goods__image {
+    position: absolute;
+    top: @indet-out-tablet + 50px + @indet-out-tablet;
+    right: @indet-out-tablet;
+
+    margin-bottom: 0;
+
+    img {
+      width: 333px;
+      height: 404px;
+    }
+  }
+
+  .week-goods__desc {
+    margin-right: 334px + 45px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .week-goods__list {
+    width: auto;
+    margin-right: 334px + 45px;
+  }
+
+  .week-goods__price {
+    margin-top: auto;
+    margin-right: 334px + 45px;
+  }
+
+  .week-goods__button-order {
+    margin-right: 334px + 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .week-goods__wrapper {
+    min-height: 636px + 2 * 54px;
+    padding-top: 54px;
+    padding-bottom: 54px;
+    padding-left: @indet-out-desktop + 175px;
+  }
+
+  .week-goods__title {
+    top: @indet-in-desktop + 54px + 5px;
+    right: unset;
+    left: @indet-out-desktop;
+
+    max-width: unset;
+    width: 175px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .week-goods__goods-title {
+    margin-top: @indet-in-desktop;
+    margin-bottom: @indet-in-desktop;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .week-goods__image {
+    top: 54px;
+    right: 100px;
+    z-index: -1;
+
+    img {
+      width: 525px;
+      height: 636px;
+    }
+  }
+
+  .week-goods__desc {
+    margin-right: 525px + @indet-in-desktop;
+    margin-bottom: @indet-in-desktop;
+  }
+
+  .week-goods__list {
+    margin-right: 525px + @indet-in-desktop;
+  }
+
+  .week-goods__price {
+    margin-right: 525px + @indet-in-desktop;
+  }
+
+  .week-goods__button-order {
+    margin-right: 525px + @indet-in-desktop;
+  }
+}

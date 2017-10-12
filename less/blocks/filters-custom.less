@@ -89,3 +89,30 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+
+@media (min-width: @tablet-width) {
+  .filters-custom {
+    fieldset {
+      position: relative;
+
+      margin-bottom: 50px;
+
+      border-top: none;
+
+      &:nth-child(2n) {
+        //background-color: #f1f1f1;
+      }
+    }
+
+    legend {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 167px;
+      margin-bottom: 0;
+      padding-right: @indet-in-tablet;
+    }
+  }
+}
