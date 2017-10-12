@@ -12,3 +12,37 @@
   line-height: @font-lheight-h2-mob;
   color: black;
 }
+
+.about__list {
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
+
+@media (min-width: @tablet-width) {
+  .about__title {
+    margin-bottom: 40px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about__list {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__title {
+    padding-right: 175px;
+    padding-left: 175px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .about__list {
+    padding-right: 175px;
+    padding-left: 175px;
+  }
+}

@@ -12,7 +12,7 @@
 
 .reviews-list__author {
   margin-top: 0;
-  margin-bottom: @indet-out;
+  margin-bottom: 0;
 
   font-size: 17px;
 }
@@ -23,19 +23,25 @@
   color: black;
 }
 
-.reviews__toggles {
-  display: flex;
 
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 35px;
+@media (min-width: @tablet-width) {
+  .reviews-list {
+    margin-bottom: 0;
+  }
+
+  .reviews-list__text {
+    margin-bottom: 60px;
+
+    font-size: 17px;
+  }
+
+  .reviews-list__author-name {
+    font-size: 18px;
+  }
 }
 
-.reviews__button-toggles {
-  flex-grow: 1;
-}
-
-.reviews__feedback-button {
-  margin-top: 0;
-  margin-bottom: 0;
+@media (min-width: @desktop-width) {
+  .reviews-list__author-name {
+    font-size: 17px;
+  }
 }

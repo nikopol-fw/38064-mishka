@@ -19,6 +19,8 @@
 
 
 body {
+  min-width: 320px;
+
   font: normal @font-size-base-mob/@font-lheight-base-mob "Open Sans", "Verdana", sans-serif;
   color: @color-base;
 }
@@ -156,5 +158,23 @@ img {
 
   &.toggle-button--open {
     background-image: url("../img/icon-menu-close.svg");
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .container {
+    padding-left: @indet-out-tablet;
+    padding-right: @indet-out-tablet;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1250px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: @indet-out-desktop;
+    padding-right: @indet-out-desktop;
   }
 }
