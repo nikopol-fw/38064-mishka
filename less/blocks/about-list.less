@@ -9,36 +9,74 @@
 }
 
 .about-list__item {
-  margin-bottom: 20px;
+  margin-bottom: @indet-out;
+
+  &.about-list__item--ecology {
+    svg {
+      margin-left: 8px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &.about-list__item--profit {
+    svg {
+      margin-bottom: 26px;
+    }
+  }
+
+  &.about-list__item--likes {
+    svg {
+      margin-left: 7px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &.about-list__item--custom {
+    svg {
+      margin-left: 4px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &.about-list__item--support {
+    svg {
+      margin-left: -6px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &.about-list__item--package {
+    svg {
+      margin-left: 3px;
+      margin-bottom: 22px;
+    }
+  }
+
+  svg {
+    display: block;
+
+    fill: @color-theme;
+  }
 }
 
 
 @media (min-width: @tablet-width) {
   .about-list {
-    display: flex;
-    flex-wrap: wrap;
+    column-count: 2;
+    column-gap: 0;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 
   .about-list__item {
-    flex: 0 0 50%;
-
-    margin-bottom: 50px;
+    margin-bottom: 58px;
     padding-right: 30px;
 
     &.about-list__item--ecology {
-      order: -6;
-    }
-
-    &.about-list__item--custom {
-      order: -5;
-    }
-
-    &.about-list__item--profit {
-      order: -4;
-    }
-
-    &.about-list__item--support {
-      order: -3;
+      svg {
+        margin-bottom: 16px;
+      }
     }
   }
 }
