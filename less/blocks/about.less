@@ -1,12 +1,12 @@
 
 .about {
-  padding-top: @indet-out;
-  padding-bottom: @indet-out;
+  padding-top: 68px;
+  padding-bottom: 24px;
 }
 
 .about__title {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 31px;
 
   font-size: @font-size-h2-mob;
   line-height: @font-lheight-h2-mob;
@@ -20,19 +20,28 @@
 
 
 @media (min-width: @tablet-width) {
+  .about {
+    padding-bottom: 24px;
+  }
+
   .about__title {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 
     font-size: 43px;
     line-height: 50px;
   }
 
   .about__list {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .about {
+    padding-top: @indet-out-desktop;
+    padding-bottom: 30px;
+  }
+
   .about__title {
     padding-right: 175px;
     padding-left: 175px;

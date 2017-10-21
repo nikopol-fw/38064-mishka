@@ -67,11 +67,11 @@ img {
 }
 
 .button {
-  padding: 13px 48px;
+  padding: 14px 48px;
 
   font: inherit;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
   text-align: center;
   color: inherit;
@@ -107,17 +107,31 @@ img {
   &.button--slider {
     height: 50px;
 
+    background: center no-repeat;
+
     border-width: 1px;
     border-color: @color-decore;
 
     & + .button--slider {
-      border-left: 0;
+      border-left: none;
     }
 
     &:hover,
     &:focus {
-      background-color: white;
+      opacity: 0.6;
     }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &.button--slider-next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &.button--slider-prev {
+    background-image: url("../img/icon-left-arrow.svg");
   }
 }
 
@@ -166,6 +180,18 @@ img {
   .container {
     padding-left: @indet-out-tablet;
     padding-right: @indet-out-tablet;
+  }
+
+  .button {
+    font-size: 17px;
+
+    &.button--slider {
+      padding-right: 43px;
+      padding-left: 43px;
+
+      background-color: white;
+      border-color: transparent;
+    }
   }
 }
 

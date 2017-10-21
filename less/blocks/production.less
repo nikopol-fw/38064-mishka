@@ -2,19 +2,29 @@
 .production {
   margin-bottom: @indet-out * 2;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 33px;
 
   border: 1px solid @color-decore;
 }
 
 .production__title {
+  position: relative;
+
   margin: 0 25px 25px;
-  padding-left: 20px + 32px;
+  padding-left: 64px;
 
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: black;
+
+  svg {
+    fill: @color-theme;
+
+    position: absolute;
+    top: 6px;
+    left: 8px;
+  }
 }
 
 .production__video-wrapper {
@@ -31,8 +41,8 @@
 .production__desc {
   margin-top: 0;
   margin-bottom: 25px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 33px;
+  padding-left: 33px;
 
   font-size: 13px;
   line-height: 24px;
@@ -41,8 +51,8 @@
 .production__order-button {
   margin-top: 0;
   margin-bottom: 0;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 33px;
+  padding-left: 33px;
 }
 
 
@@ -51,14 +61,27 @@
     display: flex;
     flex-direction: column;
 
+    margin-bottom: 76px;
     padding-top: 0;
   }
 
   .production__title {
+    margin-bottom: 32px;
+    padding-left: 80px;
+
     font-size: 20px;
+
+    svg {
+      top: -4px;
+      left: 16px;
+    }
   }
 
   .production__desc {
+    margin-bottom: 36px;
+    padding-right: 40px;
+    padding-left: 40px;
+
     font-size: 15px;
     line-height: 30px;
   }
@@ -67,11 +90,16 @@
     flex: 0 0 455px;
     order: -1;
 
-    margin-bottom: 35px;
+    margin-bottom: 36px;
 
     iframe {
       height: 455px;
     }
+  }
+
+  .production__order-button {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -80,14 +108,20 @@
     position: relative;
 
     min-height: 455px;
+    margin-bottom: 106px;
     padding-bottom: 60px;
   }
 
   .production__title {
     width: 230px;
-    margin: 45px 70px 35px auto;
-    padding-top: 55px;
+    margin: 45px 60px 35px auto;
+    padding-top: 50px;
     padding-left: 0;
+
+    svg {
+      top: -3px;
+      left: 4px;
+    }
   }
 
   .production__desc {
@@ -101,7 +135,7 @@
 
   .production__order-button {
     width: 230px;
-    margin: 0 70px 0 auto;
+    margin: 0 60px 0 auto;
     padding-right: 0;
     padding-left: 0;
   }
