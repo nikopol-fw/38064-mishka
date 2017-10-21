@@ -16,7 +16,11 @@
   <header class="page-header">
     <div class="container page-header__wrapper">
       <a class="page-header__logo" href="index.html" title="Перейти на Главную страницу">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка, логотип">
+        <picture>
+          <source media="(min-width: 768px)"
+                  srcset="img/">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка, логотип">
+        </picture>
       </a>
 
       <nav class="main-nav">
@@ -77,7 +81,12 @@
               <b class="catalog-list__price">1&nbsp;200&nbsp;руб.</b>
 
               <p class="catalog-list__add-cart">
-                <a class="catalog-list__add-link" href="#"><span class="visually-hidden">Добавить к корзину</span></a>
+                <a class="catalog-list__add-link" href="#">
+                  <svg width="21" height="19">
+                    <use xlink:href="img/icon-sprite.min.svg#icon-cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить к корзину</span>
+                </a>
               </p>
             </div>
           </li>
@@ -95,13 +104,18 @@
               <b class="catalog-list__price">690&nbsp;руб.</b>
 
               <p class="catalog-list__add-cart">
-                <a class="catalog-list__add-link" href="#"><span class="visually-hidden">Добавить к корзину</span></a>
+                <a class="catalog-list__add-link" href="#">
+                  <svg width="21" height="19">
+                    <use xlink:href="img/icon-sprite.min.svg#icon-cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить к корзину</span>
+                </a>
               </p>
             </div>
           </li>
 
           <li class="catalog-list__item">
-            <h3 class="catalog-list__item-title"><a class="catalog-list__link" href="#">Большая корзинка для игрушек</a></h3>
+            <h3 class="catalog-list__item-title"><a class="catalog-list__link" href="#">Большая корзинка<br>для игрушек</a></h3>
 
             <p class="catalog-list__item-image">
               <a href="#" title="Перейти на страницу товара"><img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек"></a>
@@ -113,7 +127,12 @@
               <b class="catalog-list__price">1&nbsp;500&nbsp;руб.</b>
 
               <p class="catalog-list__add-cart">
-                <a class="catalog-list__add-link" href="#"><span class="visually-hidden">Добавить к корзину</span></a>
+                <a class="catalog-list__add-link" href="#">
+                  <svg width="21" height="19">
+                    <use xlink:href="img/icon-sprite.min.svg#icon-cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить к корзину</span>
+                </a>
               </p>
             </div>
           </li>
@@ -124,7 +143,12 @@
 
     <div class="container">
       <section class="production">
-        <h2 class="production__title">Процесс производства</h2>
+        <h2 class="production__title">
+          <svg width="32" height="32">
+            <use xlink:href="img/icon-sprite.min.svg#icon-video"></use>
+          </svg>
+          Процесс производства
+        </h2>
 
         <div class="production__video-wrapper">
           <iframe src="https://www.youtube.com/embed/F6gnmChf7fM?ecver=1" allowfullscreen></iframe>
@@ -141,26 +165,49 @@
   <footer class="page-footer">
     <div class="container page-footer__wrapper">
       <p class="page-footer__logo">
-        <a href="index.html" title="Перейти на Главную страницу"><img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка, логотип"></a>
+        <a>
+          <picture>
+          <source media="(min-width: 768px)"
+                  srcset="img/">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка, логотип">
+        </picture>
+        </a>
       </p>
 
       <ul class="page-footer__social social">
 
         <li class="social__item social__item--inst">
-          <a href="#"><span class="visually-hidden">Мы в Инстаграм</span></a>
+          <a class="social__item-link" href="#">
+            <svg width="22" height="21">
+              <use xlink:href="img/icon-sprite.min.svg#icon-insta"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Инстаграм</span>
+          </a>
         </li>
         <li class="social__item social__item--fb">
-          <a href="#"><span class="visually-hidden">Мы в Фейсбук</span></a>
+          <a class="social__item-link" href="#">
+            <svg width="15" height="28">
+              <use xlink:href="img/icon-sprite.min.svg#icon-fb"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Фейсбук</span></a>
         </li>
         <li class="social__item social__item--tw">
-          <a href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+          <a class="social__item-link" href="#">
+            <svg width="24" height="20">
+              <use xlink:href="img/icon-sprite.min.svg#icon-twitter"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Твиттере</span></a>
         </li>
 
       </ul>
 
       <p class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано </b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу HTML Academy в новой вкладке" target="_blank"><img src="http://placehold.it/27x34" alt="HTML Academy" width="27" height="34"></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу HTML Academy в новой вкладке" target="_blank">
+          <svg width="27" height="34">
+            <use xlink:href="img/icon-sprite.min.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
       </p>
     </div>
   </footer>
