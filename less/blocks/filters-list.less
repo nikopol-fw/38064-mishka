@@ -16,6 +16,13 @@
         display: block;
       }
 
+      &:hover,
+      &:focus {
+        & + label::before {
+          border-color: @color-theme;
+        }
+      }
+
       &:active {
         & + label::before {
           border-color: #c7c7c7;
@@ -69,6 +76,13 @@
     input[type="checkbox"] {
       &:checked + label::after {
         display: block;
+      }
+
+      &:hover,
+      &:focus {
+        & + label::before {
+          border-color: @color-theme;
+        }
       }
 
       &:active {

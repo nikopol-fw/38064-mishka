@@ -101,7 +101,13 @@
 
         <h3 class="week-goods__goods-title">Вязаные корзинки</h3>
 
-        <p class="week-goods__image"><img src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки"></p>
+        <p class="week-goods__image">
+          <picture>
+            <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
+          </picture>
+        </p>
 
         <p class="week-goods__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
@@ -219,38 +225,16 @@
       </div>
     </section>
 
-    <div class="modal" id="cart-add">
-      <section class="modal__content cart-add">
-        <h2 class="cart-add__title">Добавить в&nbsp;корзину</h2>
-        <p class="cart-add__text">Выберите размер:</p>
-        <form method="POST" action="https://echo.htmlacademy.ru">
-          <ul class="cart-add__list">
-            <li class="cart-add__item">
-              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-s">
-              <label class="cart-add__item-label" for="cart-add__size-s">S</label>
-            </li
-            ><li class="cart-add__item">
-              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-m">
-              <label class="cart-add__item-label" for="cart-add__size-m">M</label>
-            </li
-            ><li class="cart-add__item">
-              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-l">
-              <label class="cart-add__item-label" for="cart-add__size-l">L</label>
-            </li>
-          </ul>
-          <p class="cart-add__button-wrapper">
-            <button class="button button--wide cart-add__button" type="submit">Добавить</button>
-          </p>
-        </form>
-      </section>
-    </div>
   </main>
 
   <footer class="page-footer">
     <div class="container page-footer__wrapper">
       <p class="page-footer__logo">
-        <a>
-          <img class="page-header__logo-image" src="img/logo-footer.svg" alt="Мишка, логотип">
+        <a class="page-footer__logo-link">
+          <svg width="102" height="34" aria-labelledby="page-footer__logo-title" role="img">
+            <use xlink:href="img/icon-sprite.min.svg#logo-footer"></use>
+            <title id="page-footer__logo-title">Мишка, логотип</title>
+          </svg>
         </a>
       </p>
 
@@ -291,6 +275,33 @@
       </p>
     </div>
   </footer>
+
+  <div class="modal-fade"></div>
+  <div class="modal" id="cart-add">
+    <section class="modal__content cart-add">
+      <h2 class="cart-add__title">Добавить в&nbsp;корзину</h2>
+      <p class="cart-add__text">Выберите размер:</p>
+      <form method="POST" action="https://echo.htmlacademy.ru">
+        <ul class="cart-add__list">
+          <li class="cart-add__item">
+            <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-s">
+            <label class="cart-add__item-label" for="cart-add__size-s">S</label>
+          </li
+          ><li class="cart-add__item">
+            <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-m">
+            <label class="cart-add__item-label" for="cart-add__size-m">M</label>
+          </li
+          ><li class="cart-add__item">
+            <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-l">
+            <label class="cart-add__item-label" for="cart-add__size-l">L</label>
+          </li>
+        </ul>
+        <p class="cart-add__button-wrapper">
+          <button class="button button--wide cart-add__button" type="submit">Добавить</button>
+        </p>
+      </form>
+    </section>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

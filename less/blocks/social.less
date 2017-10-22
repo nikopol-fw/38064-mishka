@@ -26,4 +26,22 @@
   svg {
     fill: #231f20;
   }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:focus {
+    .no-outline;
+  }
+
+  &:active {
+    svg {
+      .rgbaColorIn(#46c1ae, 0.3);
+      fill: @result;
+    }
+  }
 }

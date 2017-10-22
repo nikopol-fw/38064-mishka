@@ -35,10 +35,20 @@
             <a class="site-list__link" href="form.html"><span>Вязание на заказ</span></a>
           </li>
           <li class="site-list__item site-list__item--search">
-            <a class="site-list__link" href="#"><span>Поиск по сайту</span></a>
+            <a class="site-list__link" href="#">
+              <svg width="18" height="18">
+                <use xlink:href="img/icon-sprite.min.svg#icon-search"></use>
+              </svg>
+              <span>Поиск по сайту</span>
+            </a>
           </li>
           <li class="site-list__item site-list__item--cart">
-            <a class="site-list__link" href="#">Корзина: <span class="site-list__cart-filled">пока пуста</span></a>
+            <a class="site-list__link" href="#">
+              <svg width="20" height="19">
+                <use xlink:href="img/icon-sprite.min.svg#icon-cart"></use>
+              </svg>
+              Корзина: <span class="site-list__cart-filled">пока пуста</span>
+            </a>
           </li>
 
           <li class="site-list__item site-list__item--desktop-only">
@@ -74,9 +84,9 @@
             <p class="catalog-list__item-image">
               <a href="#" title="Перейти на страницу товара">
                 <picture>
-                  <source media="(min-wdth: 1250px)" srcset="img/photo-hare-desktop@1x.jpg">
-                  <source media="(min-wdth: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
-                  <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
+                  <source media="(min-width: 1250px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                  <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
                 </picture>
               </a>
             </p>
@@ -101,7 +111,13 @@
             <h3 class="catalog-list__item-title"><a class="catalog-list__link" href="#">Корзинка для белья</a></h3>
 
             <p class="catalog-list__item-image">
-              <a href="#" title="Перейти на страницу товара"><img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья"></a>
+              <a href="#" title="Перейти на страницу товара">
+                <picture>
+                  <source media="(min-width: 1250px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                  <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                </picture>
+              </a>
             </p>
 
             <p class="catalog-list__desc">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
@@ -124,7 +140,13 @@
             <h3 class="catalog-list__item-title"><a class="catalog-list__link" href="#">Большая корзинка<br>для игрушек</a></h3>
 
             <p class="catalog-list__item-image">
-              <a href="#" title="Перейти на страницу товара"><img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек"></a>
+              <a href="#" title="Перейти на страницу товара">
+                <picture>
+                  <source media="(min-width: 1250px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                  <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+                </picture>
+              </a>
             </p>
 
             <p class="catalog-list__desc">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
@@ -166,38 +188,16 @@
       </section>
     </div>
 
-    <div class="modal" id="cart-add">
-      <section class="modal__content cart-add">
-        <h2 class="cart-add__title">Добавить в&nbsp;корзину</h2>
-        <p class="cart-add__text">Выберите размер:</p>
-        <form method="POST" action="https://echo.htmlacademy.ru">
-          <ul class="cart-add__list">
-            <li class="cart-add__item">
-              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-s">
-              <label class="cart-add__item-label" for="cart-add__size-s">S</label>
-            </li
-            ><li class="cart-add__item">
-              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-m">
-              <label class="cart-add__item-label" for="cart-add__size-m">M</label>
-            </li
-            ><li class="cart-add__item">
-              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-l">
-              <label class="cart-add__item-label" for="cart-add__size-l">L</label>
-            </li>
-          </ul>
-          <p class="cart-add__button-wrapper">
-            <button class="button button--wide cart-add__button" type="submit">Добавить</button>
-          </p>
-        </form>
-      </section>
-    </div>
   </main>
 
   <footer class="page-footer">
     <div class="container page-footer__wrapper">
       <p class="page-footer__logo">
-        <a>
-          <img class="page-header__logo-image" src="img/logo-footer.svg" alt="Мишка, логотип">
+        <a class="page-footer__logo-link" href="index.html" title="Перейти на Главную страницу">
+          <svg width="102" height="34" aria-labelledby="page-footer__logo-title" role="img">
+            <use xlink:href="img/icon-sprite.min.svg#logo-footer"></use>
+            <title id="page-footer__logo-title">Мишка, логотип</title>
+          </svg>
         </a>
       </p>
 
@@ -238,6 +238,33 @@
       </p>
     </div>
   </footer>
+
+  <div class="modal-fade"></div>
+  <div class="modal" id="cart-add">
+    <section class="modal__content cart-add">
+      <h2 class="cart-add__title">Добавить в&nbsp;корзину</h2>
+      <p class="cart-add__text">Выберите размер:</p>
+      <form method="POST" action="https://echo.htmlacademy.ru">
+        <ul class="cart-add__list">
+          <li class="cart-add__item">
+            <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-s">
+            <label class="cart-add__item-label" for="cart-add__size-s">S</label>
+          </li
+          ><li class="cart-add__item">
+            <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-m">
+            <label class="cart-add__item-label" for="cart-add__size-m">M</label>
+          </li
+          ><li class="cart-add__item">
+            <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-l">
+            <label class="cart-add__item-label" for="cart-add__size-l">L</label>
+          </li>
+        </ul>
+        <p class="cart-add__button-wrapper">
+          <button class="button button--wide cart-add__button" type="submit">Добавить</button>
+        </p>
+      </form>
+    </section>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

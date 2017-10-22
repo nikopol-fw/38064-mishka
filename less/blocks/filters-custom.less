@@ -93,7 +93,12 @@
   }
 
   input[type="text"] {
-    background: url("../img/icon-phone.svg") top right no-repeat;
+    background: url("../img/icon-phone.svg") top 5px right 7px no-repeat;
+
+    &:hover,
+    &:focus {
+      background-image: url("../img/icon-phone-green.svg");
+    }
   }
 }
 
@@ -106,7 +111,12 @@
 
   input[type="text"],
   input[type="email"] {
-    background: url("../img/icon-mail.svg") top right no-repeat;
+    background: url("../img/icon-mail.svg") top 5px right 5px no-repeat;
+
+    &:hover,
+    &:focus {
+      background-image: url("../img/icon-mail-green.svg");
+    }
   }
 }
 
@@ -139,7 +149,7 @@
     legend {
       position: absolute;
       top: 66px;
-      left: 50px;
+      left: 0px;
 
       margin-bottom: 0;
       padding-right: @indet-in-tablet;
@@ -206,6 +216,10 @@
     padding-top: 52px;
     padding-bottom: 15px;
     padding-left: 217px;
+
+    input[type="text"] {
+      background-position: top 9px right 26px;
+    }
   }
 
   .filters-custom__email {
@@ -215,6 +229,11 @@
 
     legend {
       top: 26px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      background-position: top 8px right 22px;
     }
   }
 
@@ -290,11 +309,20 @@
   .filters-custom__phone {
     padding-right: 175px + @indet-out-desktop;
     padding-left: 175px + @indet-out-desktop;
+
+    input[type="text"] {
+      background-position: top 11px right 8px;
+    }
   }
 
   .filters-custom__email {
     padding-right: 175px + @indet-out-desktop;
     padding-left: 175px + @indet-out-desktop;
+
+    input[type="text"],
+    input[type="email"] {
+      background-position: top 11px right 4px;
+    }
   }
 
   .filters-custom__add {
