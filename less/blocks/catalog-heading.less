@@ -10,7 +10,30 @@
 }
 
 .catalog-heading__item {
-  background-color: @color-theme;
+  position: relative;
+
+  &--interior {
+    background-color: @color-theme;
+
+    svg {
+      right: 37px;
+    }
+  }
+
+  &--toys {
+    background-color: @color-theme-2;
+
+    svg {
+      right: 26px;
+    }
+  }
+
+  svg {
+    fill: #3bb09d;
+
+    position: absolute;
+    top: 24px;
+  }
 }
 
 .catalog-heading__link {
@@ -28,6 +51,10 @@
   &:active {
     .rgbaColorIn (white, 0.3);
     color: @result;
+
+    svg {
+      fill: #44c0aa;
+    }
   }
 }
 

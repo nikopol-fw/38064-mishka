@@ -1,7 +1,6 @@
 
 .site-list {
   margin: 0;
-  padding: 0;
   list-style: none;
 
   font-weight: bold;
@@ -10,25 +9,17 @@
 }
 
 .site-list__item {
-  &.site-list__item--search .site-list__link {
-    background-image: url("../img/icon-search.svg");
-    background-size: 18px 19px;
-  }
-
-  &.site-list__item--cart .site-list__link {
-    background-image: url("../img/icon-cart.svg");
-    background-size: 21px 18px;
-  }
-
   &.site-list__item--desktop-only {
     display: none;
   }
 }
 
 .site-list__link {
+  position: relative;
+
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   padding-left: 45px;
 
   color: black;
@@ -41,6 +32,10 @@
   &:focus {
     .rgbaColorIn(black, 0.6);
     color: @result;
+
+    svg {
+      fill: @color-theme;
+    }
   }
 
   &:focus {
@@ -50,6 +45,21 @@
   &:active {
     .rgbaColorIn(black, 0.3);
     color: @result;
+
+    svg {
+      .rgbaColorIn(@color-theme, 0.3);
+      fill: @result;
+    }
+  }
+
+  svg {
+    .rgbaColorIn(#231f20, 0.3);
+    fill: @result;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
   }
 }
 
@@ -125,6 +135,10 @@
 
   .site-list__link {
     padding: 17px;
+
+    svg {
+      left: 32px;
+    }
   }
 }
 
