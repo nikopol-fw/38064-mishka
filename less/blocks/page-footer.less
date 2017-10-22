@@ -7,6 +7,28 @@
   display: none;
 }
 
+.page-footer__logo-link {
+  display: inline-block;
+
+  &[href]:hover,
+  &:focus {
+    svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:focus {
+    .no-outline;
+  }
+
+  &[href]:active {
+    svg {
+      .rgbaColorIn(#46c1ae, 0.3);
+      fill: @result;
+    }
+  }
+}
+
 .page-footer__social {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -23,6 +45,26 @@
   padding-bottom: 20px;
 
   text-align: center;
+}
+
+.copyright__link {
+  &:hover,
+  &:focus {
+    svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:focus {
+    .no-outline;
+  }
+
+  &:active {
+    svg {
+      .rgbaColorIn(#46c1ae, 0.3);
+      fill: @result;
+    }
+  }
 }
 
 

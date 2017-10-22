@@ -78,9 +78,17 @@
     fill: #cccccc;
   }
 
-  &:active {
+  &:hover,
+  &:focus {
     svg {
       fill: @color-theme;
+    }
+  }
+
+  &:active {
+    svg {
+      .rgbaColorIn(@color-theme, 0.3);
+      fill: @result;
     }
   }
 }
