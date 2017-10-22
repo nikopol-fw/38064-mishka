@@ -7,12 +7,30 @@
 
 .main-nav__list {
   display: none;
+  padding-right: 0;
+  padding-left: 0;
 
-  &.main-nav__list--open {
+  background-color: white;
+
+  &--open {
     display: block;
   }
 }
 
+
+@media (max-width: (@tablet-width - 1px)) {
+  .main-nav__list {
+    &--js {
+      position: absolute;
+      right: 0;
+      left: 0;
+      z-index: 1;
+
+      padding-right: @indet-out;
+      padding-left: @indet-out;
+    }
+  }
+}
 
 @media (min-width: @tablet-width) {
   .main-nav {
@@ -24,6 +42,10 @@
 
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__list {
+    background-color: transparent;
   }
 }
 

@@ -30,16 +30,33 @@
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    padding-top: 35px;
-    padding-bottom: 28px;
+    padding-top: @indet-out-tablet;
+    padding-bottom: @indet-out-tablet;
   }
 
   .page-footer__logo {
+    flex: 0 0 30%;
+
+    margin: 0;
+
     display: block;
   }
 
   .page-footer__social {
+    flex: 0 0 30%;
+
+    padding: 0;
+
     border-bottom: none;
+  }
+
+  .page-footer__copyright {
+    flex: 0 0 30%;
+
+    padding: 0;
+
+    text-align: right;
   }
 }
