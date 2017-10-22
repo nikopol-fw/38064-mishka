@@ -24,9 +24,9 @@
       </a>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle toggle-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-nav__toggle toggle-button toggle-button--open" id="menu-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list main-nav__list--open site-list" id="main-menu">
 
           <li class="site-list__item site-list__item--catalog">
             <a class="site-list__link" href="catalog.html"><span>Каталог товаров</span></a>
@@ -72,7 +72,13 @@
             <h3 class="catalog-list__item-title"><a class="catalog-list__link" href="#">Зайчик-попрыгайчик</a></h3>
 
             <p class="catalog-list__item-image">
-              <a href="#" title="Перейти на страницу товара"><img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик"></a>
+              <a href="#" title="Перейти на страницу товара">
+                <picture>
+                  <source media="(min-wdth: 1250px)" srcset="img/photo-hare-desktop@1x.jpg">
+                  <source media="(min-wdth: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
+                  <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
+                </picture>
+              </a>
             </p>
 
             <p class="catalog-list__desc">Рост 30&nbsp;см, вес 200&nbsp;г</p>
@@ -160,6 +166,31 @@
       </section>
     </div>
 
+    <div class="modal" id="cart-add">
+      <section class="modal__content cart-add">
+        <h2 class="cart-add__title">Добавить в&nbsp;корзину</h2>
+        <p class="cart-add__text">Выберите размер:</p>
+        <form method="POST" action="https://echo.htmlacademy.ru">
+          <ul class="cart-add__list">
+            <li class="cart-add__item">
+              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-s">
+              <label class="cart-add__item-label" for="cart-add__size-s">S</label>
+            </li
+            ><li class="cart-add__item">
+              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-m">
+              <label class="cart-add__item-label" for="cart-add__size-m">M</label>
+            </li
+            ><li class="cart-add__item">
+              <input class="cart-add__item-radio visually-hidden" type="radio" name="cart-add__size" id="cart-add__size-l">
+              <label class="cart-add__item-label" for="cart-add__size-l">L</label>
+            </li>
+          </ul>
+          <p class="cart-add__button-wrapper">
+            <button class="button button--wide cart-add__button" type="submit">Добавить</button>
+          </p>
+        </form>
+      </section>
+    </div>
   </main>
 
   <footer class="page-footer">
@@ -208,5 +239,6 @@
     </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
