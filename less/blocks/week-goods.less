@@ -146,8 +146,18 @@
   }
 
   .week-goods__list {
-    width: auto;
-    margin-right: 334px + 45px;
+    display: block;
+    padding-right: 334px + 45px;
+
+    tbody {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      display: block;
+      width: 100%;
+    }
   }
 
   .week-goods__field {
@@ -215,7 +225,7 @@
   }
 
   .week-goods__list {
-    margin-right: 525px + @indet-in-desktop;
+    padding-right: 525px + @indet-in-desktop;
   }
 
   .week-goods__price {
