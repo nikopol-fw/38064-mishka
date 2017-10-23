@@ -64,12 +64,11 @@
   </header>
 
   <main class="page-main">
-    <h1 class="visually-hidden">Мишка – интернет магазин милых изделий ручной работы.</h1>
-
-    <section class="page-heading">
+    <div class="page-heading">
       <div class="page-heading__wrapper">
-        <b class="page-heading__title">Милые штуки ручной<br>работы для дома</b>
+        <h1 class="visually-hidden">Мишка – интернет магазин милых изделий ручной работы.</h1>
 
+        <b class="page-heading__title">Милые штуки ручной<br>работы для дома</b>
         <p class="page-heading__delivery-ticket">Бесплатная доставка по России</p>
 
         <ul class="page-heading__catalog catalog-heading">
@@ -93,7 +92,7 @@
 
         </ul>
       </div>
-    </section>
+    </div>
 
     <section class="week-goods">
       <div class="container week-goods__wrapper">
@@ -103,6 +102,10 @@
 
         <p class="week-goods__image">
           <picture>
+            <source type="image/webp" media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+
             <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
