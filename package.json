@@ -43,6 +43,7 @@
     "node": "8.2"
   },
   "dependencies": {
-    "del": "^3.0.0"
+    "del": "^3.0.0",
+    "svg4everybody": "^2.1.9"
   }
 }
