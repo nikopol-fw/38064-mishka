@@ -12,7 +12,7 @@
 
   &[href]:hover,
   &:focus {
-    svg {
+    .page-footer__svg {
       fill: #46c1ae;
     }
   }
@@ -22,7 +22,7 @@
   }
 
   &[href]:active {
-    svg {
+    .page-footer__svg {
       .rgbaColorIn(#46c1ae, 0.3);
       fill: @result;
     }
@@ -45,26 +45,6 @@
   padding-bottom: 20px;
 
   text-align: center;
-}
-
-.copyright__link {
-  &:hover,
-  &:focus {
-    svg {
-      fill: #46c1ae;
-    }
-  }
-
-  &:focus {
-    .no-outline;
-  }
-
-  &:active {
-    svg {
-      .rgbaColorIn(#46c1ae, 0.3);
-      fill: @result;
-    }
-  }
 }
 
 

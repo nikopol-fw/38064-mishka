@@ -20,11 +20,31 @@
     .rgbaColorIn(black, 0.1);
     box-shadow: 0 6px 10px 0 @result;
   }
+
+  &:active {
+    .rgbaColorIn(black, 0.1);
+    box-shadow: 0 3px 5px 0 @result;
+  }
 }
 
 .catalog-list__link {
   text-decoration: none;
-  color: inherit;
+  color: black;
+
+  &:hover,
+  &:focus {
+    .rgbaColorIn(black, 0.6);
+    color: @result;
+  }
+
+  &:focus {
+    .no-outline;
+  }
+
+  &:active {
+    .rgbaColorIn(black, 0.3);
+    color: @result;
+  }
 }
 
 .catalog-list__item-title {
@@ -74,19 +94,23 @@
 }
 
 .catalog-list__add-link {
-  svg {
+  .catalog-list__svg {
     fill: #cccccc;
   }
 
   &:hover,
   &:focus {
-    svg {
+    .catalog-list__svg {
       fill: @color-theme;
     }
   }
 
+  &:focus {
+    .no-outline;
+  }
+
   &:active {
-    svg {
+    .catalog-list__svg {
       .rgbaColorIn(@color-theme, 0.3);
       fill: @result;
     }
@@ -158,13 +182,15 @@
   }
 
   .catalog-list__item {
-    flex: 0 0 (@desktop-width - @indet-out-desktop * 2 - 2 * 25px * 2) / 3;
+    flex: 0 0 (@desktop-width - @indet-out-desktop * 2 - 2 * 25px * 2 - 2px * 3) / 3;
 
-    height: unset;
+    height: auto;
     margin-right: 25px;
     margin-left: 25px;
     margin-bottom: 25px;
     padding: 0;
+
+    box-sizing: content-box;
 
     &:nth-child(3n + 1) {
       margin-left: 0;

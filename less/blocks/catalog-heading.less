@@ -15,7 +15,7 @@
   &--interior {
     background-color: @color-theme;
 
-    svg {
+    .catalog-heading__svg {
       right: 37px;
     }
   }
@@ -23,17 +23,17 @@
   &--toys {
     background-color: @color-theme-2;
 
-    svg {
+    .catalog-heading__svg {
       right: 26px;
     }
   }
+}
 
-  svg {
-    fill: #3bb09d;
+.catalog-heading__svg {
+  fill: #3bb09d;
 
-    position: absolute;
-    top: 24px;
-  }
+  position: absolute;
+  top: 24px;
 }
 
 .catalog-heading__link {
@@ -52,7 +52,7 @@
     .rgbaColorIn (white, 0.3);
     color: @result;
 
-    svg {
+    .catalog-heading__svg {
       fill: #44c0aa;
     }
   }
