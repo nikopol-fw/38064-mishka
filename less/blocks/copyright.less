@@ -17,10 +17,29 @@
 
   line-height: 0;
 
-  svg {
-    fill: @color-theme;
+  &:hover,
+  &:focus {
+    .copyright__svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:focus {
+    .no-outline;
+  }
+
+  &:active {
+    .copyright__svg {
+      .rgbaColorIn(#46c1ae, 0.3);
+      fill: @result;
+    }
   }
 }
+
+.copyright__svg {
+  fill: @color-theme;
+}
+
 
 @media (min-width: @tablet-width) {
   .copyright__link {

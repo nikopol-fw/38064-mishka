@@ -19,7 +19,7 @@
         <picture>
           <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка, логотип">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка, логотип" width="149" height="72">
         </picture>
       </a>
 
@@ -36,7 +36,7 @@
           </li>
           <li class="site-list__item site-list__item--search">
             <a class="site-list__link" href="#">
-              <svg width="18" height="18">
+              <svg class="site-list__svg" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
               <span>Поиск по сайту</span>
@@ -44,7 +44,7 @@
           </li>
           <li class="site-list__item site-list__item--cart">
             <a class="site-list__link" href="#">
-              <svg width="20" height="19">
+              <svg class="site-list__svg" width="20" height="19">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
               Корзина: <span class="site-list__cart-filled">пока пуста</span>
@@ -102,7 +102,7 @@
 
               <p class="catalog-list__add-cart">
                 <a class="catalog-list__add-link" href="#">
-                  <svg width="21" height="19">
+                  <svg class="catalog-list__svg" width="21" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                   <span class="visually-hidden">Добавить к корзину</span>
@@ -135,7 +135,7 @@
 
               <p class="catalog-list__add-cart">
                 <a class="catalog-list__add-link" href="#">
-                  <svg width="21" height="19">
+                  <svg class="catalog-list__svg" width="21" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                   <span class="visually-hidden">Добавить к корзину</span>
@@ -168,7 +168,7 @@
 
               <p class="catalog-list__add-cart">
                 <a class="catalog-list__add-link" href="#">
-                  <svg width="21" height="19">
+                  <svg class="catalog-list__svg" width="21" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                   <span class="visually-hidden">Добавить к корзину</span>
@@ -184,7 +184,7 @@
     <div class="container">
       <section class="production">
         <h2 class="production__title">
-          <svg width="32" height="32">
+          <svg class="production__svg" width="32" height="32">
             <use xlink:href="img/sprite.svg#icon-video"></use>
           </svg>
           Процесс производства
@@ -206,7 +206,7 @@
     <div class="container page-footer__wrapper">
       <p class="page-footer__logo">
         <a class="page-footer__logo-link" href="index.html" title="Перейти на Главную страницу">
-          <svg width="102" height="34" aria-labelledby="page-footer__logo-title" role="img">
+          <svg class="page-footer__svg" width="102" height="34" aria-labelledby="page-footer__logo-title" role="img">
             <use xlink:href="img/sprite.svg#logo-footer"></use>
             <title id="page-footer__logo-title">Мишка, логотип</title>
           </svg>
@@ -217,7 +217,7 @@
 
         <li class="social__item social__item--inst">
           <a class="social__item-link" href="#">
-            <svg width="22" height="21">
+            <svg class="social__item-svg" width="22" height="21">
               <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
             <span class="visually-hidden">Мы в Инстаграм</span>
@@ -225,14 +225,14 @@
         </li>
         <li class="social__item social__item--fb">
           <a class="social__item-link" href="#">
-            <svg width="15" height="28">
+            <svg class="social__item-svg" width="15" height="28">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
             <span class="visually-hidden">Мы в Фейсбук</span></a>
         </li>
         <li class="social__item social__item--tw">
           <a class="social__item-link" href="#">
-            <svg width="24" height="20">
+            <svg class="social__item-svg" width="24" height="20">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
             <span class="visually-hidden">Мы в Твиттере</span></a>
@@ -243,7 +243,7 @@
       <p class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано </b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Перейти на страницу HTML Academy в новой вкладке" target="_blank">
-          <svg width="27" height="34">
+          <svg class="copyright__svg" width="27" height="34">
             <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
@@ -278,6 +278,9 @@
     </section>
   </div>
 
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  <script src="js/picturefill.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

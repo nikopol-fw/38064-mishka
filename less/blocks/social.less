@@ -23,13 +23,9 @@
 
   line-height: 0;
 
-  svg {
-    fill: #231f20;
-  }
-
   &:hover,
   &:focus {
-    svg {
+    .social__item-svg {
       fill: #46c1ae;
     }
   }
@@ -39,9 +35,13 @@
   }
 
   &:active {
-    svg {
+    .social__item-svg {
       .rgbaColorIn(#46c1ae, 0.3);
       fill: @result;
     }
   }
+}
+
+.social__item-svg {
+  fill: #231f20;
 }
