@@ -73,6 +73,7 @@ gulp.task("jsmin", function () {
   return gulp.src("build/js/script.js")
     .pipe(jsmin())
     .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("js"))
     .pipe(gulp.dest("build/js"));
 });
 

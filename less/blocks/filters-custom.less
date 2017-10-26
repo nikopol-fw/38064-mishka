@@ -1,4 +1,8 @@
 
+.filters-custom {
+  padding-top: 7px;
+}
+
 .filters-custom__fieldset {
   margin: 0;
   padding: 0;
@@ -7,16 +11,15 @@
   border-top: 1px solid #62d1ba;
 
   &--type {
-    padding-bottom: 26px;
+    padding-bottom: 35px;
   }
 
   &--color {
-    padding-bottom: 32px;
+    padding-bottom: 44px;
   }
 
   &--name {
-    padding-top: 5px;
-    padding-bottom: 30px;
+    padding-bottom: 38px;
   }
 
   &--phone {
@@ -32,7 +35,14 @@
   }
 }
 
+.filters-custom__fieldset-wrapper {
+  margin-top: -15px;
+}
+
 .filters-custom__legend {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 20px;
   padding-right: 25px;
 
   font-weight: bold;
@@ -40,10 +50,12 @@
   line-height: 17px;
   color: @color-theme;
   text-transform: uppercase;
+
+  background-color: #ffffff;
 }
 
 .filters-custom__list {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 0;
   padding: 0;
 }
@@ -52,7 +64,7 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-  color: black;
+  color: #000000;
 
   &--radio,
   &--check {
@@ -147,7 +159,7 @@
     line-height: 18px;
 
     border: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #000000;
 
     &:hover,
     &:focus {
@@ -160,8 +172,6 @@
   }
 
   &--phone {
-    margin-top: 12px;
-
     background: url("../img/icon-phone.svg") top 5px right 7px no-repeat;
 
     &:hover,
@@ -171,8 +181,6 @@
   }
 
   &--email {
-    margin-top: 12px;
-
     background: url("../img/icon-mail.svg") top 5px right 5px no-repeat;
 
     &:hover,
@@ -184,7 +192,6 @@
   &--message {
     width: 100%;
     min-height: 100px;
-    margin-top: 20px;
     padding: 15px;
 
     font: inherit;
@@ -221,6 +228,10 @@
 
 
 @media (min-width: @tablet-width) {
+  .filters-custom {
+    padding-top: 0;
+  }
+
   .filters-custom__wrapper {
     padding-right: @indet-out-tablet;
     padding-left: @indet-out-tablet;
@@ -230,18 +241,22 @@
     }
   }
 
+  .filters-custom__fieldset-wrapper {
+    display: flex;
+  }
+
   .filters-custom__fieldset {
     position: relative;
 
     border-top: none;
 
     &--type {
-      padding-top: 48px;
-      padding-bottom: 53px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     &--color {
-      padding-top: 48px;
+      padding-top: 65px;
     }
 
     &--name {
@@ -250,30 +265,28 @@
     }
 
     &--phone {
-      padding-top: 52px;
+      padding-top: 65px;
       padding-bottom: 15px;
-      padding-left: 166px;
     }
 
     &--email {
-      padding-top: 11px;
+      padding-top: 20px;
       padding-bottom: 50px;
-      padding-left: 166px;
     }
 
     &--add {
-      padding-top: 50px;
-      padding-bottom: 42px;
-      padding-left: 167px;
+      padding-top: 65px;
+      padding-bottom: 50px;
     }
   }
 
   .filters-custom__legend {
-    position: absolute;
-    top: 66px;
-    left: 0;
+    flex: 0 0 167px;
 
+    margin-top: 20px;
     padding-right: @indet-in-tablet;
+
+    background-color: transparent;
 
     &--email {
       top: 26px;
@@ -417,38 +430,39 @@
 
     &--type {
       padding-right: 175px + @indet-out-desktop;
-      padding-left: 175px + @indet-out-desktop;
+      padding-left: 165px;
     }
 
     &--color {
       padding-bottom: 28px;
       padding-right: 175px / 2 + @indet-out-desktop;
-      padding-left: 175px + @indet-out-desktop;
+      padding-left: 165px;
     }
 
     &--name {
+      padding-top: 65px;
       padding-right: 175px + @indet-out-desktop;
-      padding-left: 175px + @indet-out-desktop;
+      padding-left: 165px;
     }
 
     &--phone {
       padding-right: 175px + @indet-out-desktop;
-      padding-left: 175px + @indet-out-desktop;
+      padding-left: 165px;
     }
 
     &--email {
       padding-right: 175px + @indet-out-desktop;
-      padding-left: 175px + @indet-out-desktop;
+      padding-left: 165px;
     }
 
     &--add {
       padding-right: 175px + @indet-out-desktop;
-      padding-left: 175px + @indet-out-desktop;
+      padding-left: 165px;
     }
   }
 
   .filters-custom__legend {
-    left: 164px;
+    flex-basis: 110px;
   }
 
   .filters-custom__item {

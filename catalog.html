@@ -26,39 +26,41 @@
       <nav class="main-nav">
         <button class="main-nav__toggle toggle-button toggle-button--open" id="menu-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-        <ul class="main-nav__list main-nav__list--open site-list" id="main-menu">
+        <div class="main-nav__dropdown main-nav__dropdown--open" id="main-menu">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--catalog">
+              <a class="site-list__link site-list__link--catalog" href="catalog.html"><span>Каталог товаров</span></a>
+            </li>
+            <li class="site-list__item site-list__item--custom-made">
+              <a class="site-list__link" href="form.html"><span>Вязание на заказ</span></a>
+            </li>
+            <li class="site-list__item site-list__item--desktop-only">
+              <a class="site-list__link" href="#"><span>Новые поступления</span></a>
+            </li>
+            <li class="site-list__item site-list__item--desktop-only">
+              <a class="site-list__link" href="#"><span>Распродажа</span></a>
+            </li>
+          </ul>
 
-          <li class="site-list__item site-list__item--catalog">
-            <a class="site-list__link" href="catalog.html"><span>Каталог товаров</span></a>
-          </li>
-          <li class="site-list__item site-list__item--custom-made">
-            <a class="site-list__link" href="form.html"><span>Вязание на заказ</span></a>
-          </li>
-          <li class="site-list__item site-list__item--search">
-            <a class="site-list__link" href="#">
-              <svg class="site-list__svg" width="18" height="18">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
-              </svg>
-              <span>Поиск по сайту</span>
-            </a>
-          </li>
-          <li class="site-list__item site-list__item--cart">
-            <a class="site-list__link" href="#">
-              <svg class="site-list__svg" width="20" height="19">
-                <use xlink:href="img/sprite.svg#icon-cart"></use>
-              </svg>
-              Корзина: <span class="site-list__cart-filled">пока пуста</span>
-            </a>
-          </li>
-
-          <li class="site-list__item site-list__item--desktop-only">
-            <a class="site-list__link" href="#"><span>Новые поступления</span></a>
-          </li>
-          <li class="site-list__item site-list__item--desktop-only">
-            <a class="site-list__link" href="#"><span>Распродажа</span></a>
-          </li>
-
-        </ul>
+          <ul class="main-nav__list-service service-list">
+            <li class="service-list__item service-list__item--search">
+              <a class="service-list__link service-list__link--search" href="#">
+                <svg class="service-list__svg service-list__svg--search" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+                <span class="service-list__link-text-hide">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="service-list__item service-list__item--cart">
+              <a class="service-list__link service-list__link--cart" href="#">
+                <svg class="service-list__svg" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+                Корзина: <span class="service-list__cart-filled">пока пуста</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -192,6 +194,7 @@
 
         <div class="production__video-wrapper">
           <iframe src="https://www.youtube.com/embed/F6gnmChf7fM?ecver=1" allowfullscreen></iframe>
+          <button class="production__button-play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
         </div>
 
         <p class="production__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>

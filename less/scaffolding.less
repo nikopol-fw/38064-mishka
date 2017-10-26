@@ -78,12 +78,12 @@ img {
   text-decoration: none;
   text-transform: uppercase;
 
-  background-color: white;
+  background-color: #ffffff;
   border: 2px solid @color-base;
 
   &:hover,
   &:focus {
-    color: white;
+    color: #ffffff;
 
     background-color: @color-base;
   }
@@ -93,7 +93,7 @@ img {
   }
 
   &:active {
-    .rgbaColorIn(white, 0.3);
+    .rgbaColorIn(#ffffff, 0.3);
     color: @result;
   }
 
@@ -104,7 +104,7 @@ img {
     padding-left: 10px;
   }
 
-  &.button--slider {
+  &--slider {
     height: 50px;
 
     background: center no-repeat;
@@ -118,6 +118,7 @@ img {
 
     &:hover,
     &:focus {
+      background-color: #ffffff;
       opacity: 0.6;
     }
 
@@ -126,11 +127,11 @@ img {
     }
   }
 
-  &.button--slider-next {
+  &--slider-next {
     background-image: url("../img/icon-right-arrow.svg");
   }
 
-  &.button--slider-prev {
+  &--slider-prev {
     background-image: url("../img/icon-left-arrow.svg");
   }
 }
@@ -189,11 +190,11 @@ img {
   .button {
     font-size: 17px;
 
-    &.button--slider {
+    &--slider {
       padding-right: 43px;
       padding-left: 43px;
 
-      background-color: white;
+      background-color: #ffffff;
       border-color: transparent;
     }
   }

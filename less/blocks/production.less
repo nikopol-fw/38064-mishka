@@ -5,6 +5,18 @@
   padding-bottom: @indet-out;
 
   border: 1px solid @color-decore;
+
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    .rgbaColorIn(#000000, 0.1);
+    box-shadow: 0 6px 10px 0 @result;
+  }
+
+  &:active {
+    .rgbaColorIn(#000000, 0.1);
+    box-shadow: 0 3px 5px 0 @result;
+  }
 }
 
 .production__title {
@@ -16,7 +28,7 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-  color: black;
+  color: #000000;
 }
 
 .production__svg {
@@ -28,6 +40,8 @@
 }
 
 .production__video-wrapper {
+  position: relative;
+
   margin-bottom: 25px;
 
   iframe {
@@ -46,6 +60,33 @@
 
   font-size: 13px;
   line-height: 24px;
+}
+
+.production__button-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 102px;
+  height: 78px;
+
+  background: url("../img/icon-play.svg") center no-repeat;
+  border: none;
+
+  &:hover,
+  &:focus {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:focus {
+    .no-outline;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 .production__order-button {

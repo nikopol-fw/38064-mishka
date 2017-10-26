@@ -3,14 +3,14 @@ var menu_toggle = document.querySelector("#menu-toggle"),
     menu_main = document.querySelector("#main-menu");
 
 menu_toggle.classList.remove("toggle-button--open");
-menu_main.classList.remove("main-nav__list--open");
-menu_main.classList.add("main-nav__list--js");
+menu_main.classList.remove("main-nav__dropdown--open");
+menu_main.classList.add("main-nav__dropdown--js");
 
 menu_toggle.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   menu_toggle.classList.toggle("toggle-button--open");
-  menu_main.classList.toggle("main-nav__list--open");
+  menu_main.classList.toggle("main-nav__dropdown--open");
 });
 
 
@@ -31,14 +31,14 @@ if (order_button) {
 }
 
 if (cart_buttons) {
-  cart_buttons.forEach(function (item, idx) {
-    item.addEventListener("click", function (evt) {
-      evt.preventDefault();
+  [].forEach.call(cart_buttons, function (object) {
+    object.addEventListener("click", function (evt) {
 
-      body.classList.add("js-modal");
-      modal.classList.add("modal--open");
-      modal_fade.classList.add("modal-fade--open");
-    });
+    evt.preventDefault();
+
+    body.classList.add("js-modal");
+    modal.classList.add("modal--open");
+    modal_fade.classList.add("modal-fade--open");
   });
 }
 
