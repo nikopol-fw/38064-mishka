@@ -14,6 +14,7 @@ var svgstore = require("gulp-svgstore");
 var run = require("run-sequence");
 var del = require("del");
 var jsmin = require("gulp-uglify");
+var pump = require("pump");
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -69,12 +70,16 @@ gulp.task("images", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("jsmin", function () {
-  return gulp.src("build/js/script.js")
-    .pipe(jsmin())
-    .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("js"))
-    .pipe(gulp.dest("build/js"));
+gulp.task("jsmin", function (cb) {
+  pump([
+    gulp.src("build/js/script.js"),
+    jsmin(),
+    rename("script.min.js"),
+    gulp.dest("js"),
+    gulp.dest("build/js")
+  ],
+  cb
+  );
 });
 
 gulp.task("clean", function () {

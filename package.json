@@ -46,6 +46,7 @@
     "del": "^3.0.0",
     "gulp-uglify": "^3.0.0",
     "picturefill": "^3.0.2",
+    "pump": "^1.0.2",
     "svg4everybody": "^2.1.9"
   }
 }

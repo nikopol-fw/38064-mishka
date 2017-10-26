@@ -34,11 +34,12 @@ if (cart_buttons) {
   [].forEach.call(cart_buttons, function (object) {
     object.addEventListener("click", function (evt) {
 
-    evt.preventDefault();
+      evt.preventDefault();
 
-    body.classList.add("js-modal");
-    modal.classList.add("modal--open");
-    modal_fade.classList.add("modal-fade--open");
+      body.classList.add("js-modal");
+      modal.classList.add("modal--open");
+      modal_fade.classList.add("modal-fade--open");
+    });
   });
 }
 
