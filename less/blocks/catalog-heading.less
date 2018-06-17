@@ -32,15 +32,6 @@
 
   transition: transform 0.3s ease-out;
 
-  &:hover,
-  &:focus {
-    transform: translateY(-5px);
-  }
-
-  &:focus {
-    .no-outline;
-  }
-
   &:active {
     .rgbaColorIn (#ffffff, 0.3);
     color: @result;
@@ -82,5 +73,14 @@
 
   .catalog-heading__link {
     padding: 28px 130px 40px 36px;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-5px);
+    }
+
+    &:focus {
+      .no-outline;
+    }
   }
 }
